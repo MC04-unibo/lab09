@@ -7,8 +7,8 @@ import java.util.List;
  *
  */
 public final class SimpleController implements Controller {
-    String nextString = "";
-    List<String> history = new ArrayList<String>();
+    private String nextString = "";
+    private List<String> history = new ArrayList<String>();
 
     @Override
     public void setNextString(String text) throws NullPointerException {
@@ -29,6 +29,11 @@ public final class SimpleController implements Controller {
     public void printNextString() {
         history.add(nextString);
         System.out.println(nextString);
+    }
+
+    @Override
+    public void clearHistory() {
+        history.clear();
     }
 
 }

@@ -10,4 +10,5 @@ public interface Controller {
     String getNexString();
     List<String> getHistory();
     void printNextString();
+    void clearHistory();
 }
